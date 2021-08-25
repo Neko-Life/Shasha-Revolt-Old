@@ -1,0 +1,11 @@
+{
+    "token": "",
+    "reCmdPrefix": [
+        "^(\\.|<@\\!?{{_id}}>)\\s?",
+        "i"
+    ],
+    "owners": [
+        "01FDSW08RMJN4XDVJNV8A314FH"
+    ],
+    "errLogChannel": "01FDY9XT0A7D3V9HBK2PKVBDK5"
+}
