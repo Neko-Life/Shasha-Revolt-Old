@@ -8,4 +8,6 @@ module.exports = class SayCmd extends BaseCommand {
             name: "say"
         });
     }
+
+    async run() { }
 }
