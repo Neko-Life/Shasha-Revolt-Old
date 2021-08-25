@@ -14,6 +14,7 @@
     "lodash.isequal": "^4.5.0",
     "mobx": "^6.3.2",
     "nekos-best.js": "^4.0.1",
+    "require-all": "^3.0.0",
     "ts-node": "^10.2.1",
     "tsc-watch": "^4.1.0",
     "ulid": "^2.3.0",
