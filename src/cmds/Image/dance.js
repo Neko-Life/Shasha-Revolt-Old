@@ -11,6 +11,6 @@ module.exports = class DanceCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "dance");
+        return nekosBestCmds(msg, "dance", "shakin their hip");
     }
 }

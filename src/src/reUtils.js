@@ -24,4 +24,12 @@ JSON.safeStringify = (obj, indent = 2) => {
     return retVal;
 };
 
-module.exports = { cleanId }
+function parseComa(str) {
+    if (typeof str !== "string") throw new TypeError("string is " + typeof str);
+    return str.split(/(?<!\\),+/);
+}
+
+module.exports = {
+    cleanId,
+    parseComa
+}

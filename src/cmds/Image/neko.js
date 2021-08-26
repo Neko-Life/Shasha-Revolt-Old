@@ -12,6 +12,6 @@ module.exports = class NekoCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "nekos");
+        return nekosBestCmds(msg, "nekos", null, `Nyaaaa~`);
     }
 }

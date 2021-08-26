@@ -11,6 +11,6 @@ module.exports = class SmileCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "smile");
+        return nekosBestCmds(msg, "smile", "smilin");
     }
 }

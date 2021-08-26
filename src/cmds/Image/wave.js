@@ -11,6 +11,6 @@ module.exports = class WaveCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "wave");
+        return nekosBestCmds(msg, "wave", "waving");
     }
 }

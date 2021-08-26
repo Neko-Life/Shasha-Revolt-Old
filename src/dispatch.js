@@ -29,7 +29,7 @@ async function dispatchReClient(reClient) {
     }
 
     for (const event in reClient.eventHandlers) {
-        reClient.on(event, (...args) => {
+        reClient.on(event.replace(/-/g, "/"), (...args) => {
             reClient.eventHandlers[event].handle(reClient, ...args);
         });
         if (reClient.reDebug) console.log("Listener dispatched:", event);

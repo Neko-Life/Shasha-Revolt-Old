@@ -2,7 +2,7 @@
 
 const { fetchNeko } = require("nekos-best.js");
 const { Message } = require("../maps/Messages");
-const { cleanId } = require("./reUtils");
+const { cleanId, parseComa } = require("./reUtils");
 
 /**
  *
@@ -12,7 +12,7 @@ const { cleanId } = require("./reUtils");
  * @returns {Message}
  */
 module.exports = async (msg, arg, img) => {
-    const strs = arg.split(/(?<!\\),+/);
+    const strs = parseComa(arg);
     const inv = strs.length === 1 && !strs[0] ? msg.client.user : msg.author;
     const targets = [];
     if (!(strs.length === 1 && !strs[0]))
@@ -28,6 +28,7 @@ module.exports = async (msg, arg, img) => {
     else targets.push(msg.author);
     const map = targets.map(r => r.username + ",");
     if (map.length > 1) map[map.length - 2] = map[map.length - 2].slice(0, -1) + " and";
+    if (!map.length) return msg.channel.sendMessage("Sorry i can't find your friend anywhere :(");
     const link = await fetchNeko(img);
     return msg.channel.sendMessage(`${inv.username} ${img.endsWith("s") ? img + "es" : img + "s"} ${map.join(" ").slice(0, -1)} [❤️](${link.url})`);
 }

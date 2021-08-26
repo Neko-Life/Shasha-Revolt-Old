@@ -11,6 +11,6 @@ module.exports = class SmugCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "smug");
+        return nekosBestCmds(msg, "smug", "got a smug face");
     }
 }

@@ -11,6 +11,6 @@ module.exports = class BakaCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "baka");
+        return nekosBestCmds(msg, "baka", "embarassed");
     }
 }

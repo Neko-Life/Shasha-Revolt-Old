@@ -25,7 +25,7 @@ async function handle(msg, matchPref) {
         for (const U of msg.commandReplies) {
             if (!U) continue;
             if (U instanceof Promise) await U;
-            await U.delete?.();
+            await U.delete?.().catch(() => { });
         }
     msg.commandReplies = [];
     if (!isArray(replies)) msg.commandReplies.push(await replies);

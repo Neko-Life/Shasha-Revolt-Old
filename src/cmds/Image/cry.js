@@ -11,6 +11,6 @@ module.exports = class CryCmd extends BaseCommand {
     }
 
     async run(msg) {
-        return nekosBestCmds(msg, "cry");
+        return nekosBestCmds(msg, "cry", "crying");
     }
 }
