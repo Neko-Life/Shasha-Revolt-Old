@@ -22,6 +22,10 @@ reClient.on("user/relationship", (user) => {
     console.log(user);
 });
 
+// reClient.on("message", msg => {
+//     msg.channel.
+// })
+
 process.on("uncaughtException", (e) => {
     errLog(reClient, e);
 });

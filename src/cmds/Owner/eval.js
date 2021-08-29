@@ -5,7 +5,7 @@ const configFile = require("../../../config.json");
 const { BaseCommand } = require("../../classes/Command");
 const { Message } = require("../../maps/Messages");
 
-const includeTypes = ["String", "Boolean", "Number", "RegExp"];
+const includeTypes = ["String", "Boolean", "Number", "RegExp", "Date"];
 
 module.exports = class EvalCmd extends BaseCommand {
     constructor(client) {
